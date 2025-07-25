@@ -1,0 +1,7 @@
+torch>=2.0.0
+transformers>=4.40.0
+sentence-transformers>=2.7.0
+spacy>=3.6.0
+python-dotenv>=1.0.0
+bitsandbytes>=0.41.0
+accelerate>=0.21.0
