@@ -1,5 +1,5 @@
 # LLM-Context-Manager
-LLM inference optimization system which smartly manages the context that is fed into the model for response generation. It uses a novel contextual branching algorithm named as Contextual Scaffolding Algorithm (CSA) which determines if the previous context is needed for response generation or not. KV-cache for all responses is stored and can be called back and fed into the model is successive prompts require past context.
+LLM inference optimization system which smartly manages the context that is fed into the model for response generation through branching. It uses a novel contextual branching algorithm named as Contextual Scaffolding Algorithm (CSA) which determines if the previous context is needed for response generation or not. KV-cache for all responses is stored and can be called back and fed into the model if successive prompts require past context.
 
 ## This system optimizes LLM conversation handling by:
 
