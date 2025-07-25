@@ -12,7 +12,23 @@ LLM inference optimization system which smartly manages the context that is fed 
 > Preserving conversation coherence while optimizing computational efficiency.
 
 ## Repo Structure
-<pre> ``` LLM_Context_Manager/ |-- main.py # Main implementation |-- config.py # Configuration settings |-- conversation_manager.py # Manages conversation branches and KV cache optimization |-- model_loader.py # Loads required models |-- csa_classifier.py # Implements CSA algorithm |-- kv_cache_manager.py # KV-cache Manager |-- requirements.txt # Dependencies |-- supported_models.txt # List of all supported models |-- .env # Environment variable (HF_TOKEN) `-- README.md # This file notebook/ |-- llm_context_manager.ipynb # .ipynb file with logs to print what's happening `-- README.md ``` </pre>
+```
+LLM_Context_Manager/
+├── main.py                 # Main implementation
+├── config.py               # Configuration settings
+├── conversation_manager.py # Manages conversation branches and KV cache optimization
+├── model_loader.py         # Loads required models
+├── csa_classifier.py       # Implements CSA algorithm
+├── kv_cache_manager.py     # KV-cache Manager
+├── requirements.txt        # Dependencies
+├── supported_models.txt    # List of all supported models
+├── .env                    # Environment variable (HF_TOKEN)
+└── README.md               # This file
+
+notebook/
+├── llm_context_manager.ipynb  # .ipynb file with logs to print what's happening
+└── README.md
+```
 
 ## Working
 Think of it as tree like branching where first prompt start as a new branch in the tree, if the next prompt is contextually related to the previous one then, conversation continues on the same branch. If however, next prompt is not contextually related to previous one or it doesn't require previous context, is "self-dependent" then, kv-cache in the models is cleaned up and stored (for future use). The model now starts with fresh new kv-cache values. This continues for the rest of conversation.
