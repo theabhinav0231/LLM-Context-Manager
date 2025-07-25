@@ -84,4 +84,5 @@ This algorithm combines three checks to produce a final "Dependency Score." It u
   DependencyScore = TopicSimilarity (The topic is similar and the prompt isn't self-contained, so it's likely dependent.)
 
 
-Note: **This project is work under progress. I plan to implement more optimization techniques like branch summarisation. And a complete new UI.
+
+Note: **This project is work under progress. I plan to implement more optimization techniques like branch summarisation. A complete new chat UI and CLI!
