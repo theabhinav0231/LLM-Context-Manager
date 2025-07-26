@@ -23,7 +23,7 @@ LLM_Context_Manager/
 ├── requirements.txt        # Dependencies
 ├── supported_models.txt    # List of all supported models
 ├── .env                    # Environment variable (HF_TOKEN)
-└── README.md               # This file
+└── README.md               
 
 notebook/
 ├── llm_context_manager.ipynb  # .ipynb file with logs to print what's happening
