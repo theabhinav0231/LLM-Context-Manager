@@ -31,7 +31,7 @@ notebook/
 ```
 
 ## Working
-Think of it as tree like branching where first prompt start as a new branch in the tree, if the next prompt is contextually related to the previous one then, conversation continues on the same branch. If however, next prompt is not contextually related to previous one or it doesn't require previous context, is "self-dependent" then, kv-cache in the models is cleaned up and stored (for future use). The model now starts with fresh new kv-cache values. This continues for the rest of conversation.
+Think of it as tree like branching where first prompt start as a new branch in the tree, if the next prompt is contextually related to the previous one then, conversation continues on the same branch. If however, next prompt is not contextually related to previous one or it doesn't require previous context, is "self-dependent" then, a new branch is created and kv-cache in the models is cleaned up and stored (for future use). The model now starts with fresh new kv-cache values. This continues for the rest of conversation.
 
 The contextual similarity of the next prompt is determined by a novel Contextual Similarity Algorithm (CSA). The working is as follows:
 This algorithm combines three checks to produce a final "Dependency Score." It uses lightweight NLP tools like Part-of-Speech (POS) tagging and Named Entity Recognition (NER).
