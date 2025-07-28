@@ -85,4 +85,4 @@ This algorithm combines three checks to produce a final "Dependency Score." It u
 
 
 
-Note: **This project is work under progress. I plan to implement more optimization techniques like branch summarisation. A complete new chat UI and CLI!
+Note: **This project is work under progress. I plan to implement a more sophisticated algorithm, other optimization techniques like branch summarisation. A complete new chat UI and CLI!
